@@ -1,0 +1,47 @@
+<div class="worker-list-container">
+  <div class="header">
+    <strong class="title">Список работников</strong>
+    <div class="legend">
+      <div class="priority high">
+        <span class="priority-marker"></span>
+        Высокий приоритет
+      </div>
+      <div class="priority medium">
+        <span class="priority-marker"></span>
+        Средний приоритет
+      </div>
+      <div class="priority low">
+        <span class="priority-marker"></span>
+        Низкий приоритет
+      </div>
+    </div>
+  </div>
+
+  <section class="workers-section" *ngIf="workers.length > 0; else noData">
+    <div
+      class="worker-item"
+      *ngFor="let worker of workers"
+      [style.background-color]="getPriorityColor(worker.priorityScore)"
+    >
+      <div class="info">
+        <div class="name">{{ worker.name_surname }}</div>
+        <div class="skills">
+          <div class="skill">Основной навык: {{ worker.primarySkill }}</div>
+          <div class="skill">Вторичный навык: {{ worker.secondarySkill }}</div>
+        </div>
+        <div class="dates">
+          <span>Доступен с: {{ worker.startdate | date:'dd.MM.yyyy' }}</span>
+          <span>по {{ worker.enddate | date:'dd.MM.yyyy' }}</span>
+        </div>
+        <div class="priority-score">
+          Приоритет: {{ worker.priorityScore | number:'1.1-1' }}
+          <span class="tooltip">{{ getPriorityText(worker.priorityScore) }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <ng-template #noData>
+    <div class="no-data">Нет доступных работников</div>
+  </ng-template>
+</div>

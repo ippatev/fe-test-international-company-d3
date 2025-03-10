@@ -1,0 +1,117 @@
+.worker-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+}
+
+.priority {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priority-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.high .priority-marker {
+  background-color: #ffebee;
+}
+
+.medium .priority-marker {
+  background-color: #fff3e0;
+}
+
+.low .priority-marker {
+  background-color: #f1f8e9;
+}
+
+.workers-section {
+  display: grid;
+  gap: 16px;
+}
+
+.worker-item {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  display: grid;
+  gap: 12px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.skills {
+  display: grid;
+  gap: 8px;
+}
+
+.skill {
+  color: #666;
+}
+
+.dates {
+  display: flex;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.priority-score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tooltip {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dates {
+    flex-direction: column;
+  }
+}
