@@ -16,6 +16,7 @@ export class DataService {
   loadMockData() {
     const mockTasks = [
       {
+        id: 1,
         name: "Frontend Development",
         startdate: new Date("2024-01-01").getTime(),
         enddate: new Date("2024-02-15").getTime(),
@@ -23,6 +24,7 @@ export class DataService {
         secondarySkill: "TypeScript",
       },
       {
+        id: 2,
         name: "Backend API",
         startdate: new Date("2024-01-10").getTime(),
         enddate: new Date("2024-03-10").getTime(),
@@ -30,6 +32,7 @@ export class DataService {
         secondarySkill: "Python",
       },
       {
+        id: 3,
         name: "Database Migration",
         startdate: new Date("2024-02-01").getTime(),
         enddate: new Date("2024-03-15").getTime(),
@@ -37,6 +40,7 @@ export class DataService {
         secondarySkill: "MongoDB",
       },
       {
+        id: 4,
         name: "Mobile App Development",
         startdate: new Date("2024-02-15").getTime(),
         enddate: new Date("2024-04-20").getTime(),
@@ -44,6 +48,7 @@ export class DataService {
         secondarySkill: "iOS",
       },
       {
+        id: 5,
         name: "DevOps Pipeline Setup",
         startdate: new Date("2024-03-01").getTime(),
         enddate: new Date("2024-03-30").getTime(),
@@ -54,6 +59,7 @@ export class DataService {
 
     const mockWorkers = [
       {
+        id: 1,
         name_surname: "John Smith",
         startdate: new Date("2024-01-05").getTime(),
         enddate: new Date("2024-04-15").getTime(),
@@ -61,6 +67,7 @@ export class DataService {
         secondarySkill: "TypeScript",
       },
       {
+        id: 2,
         name_surname: "Alice Johnson",
         startdate: new Date("2024-01-10").getTime(),
         enddate: new Date("2024-02-28").getTime(),
@@ -68,6 +75,7 @@ export class DataService {
         secondarySkill: "Python",
       },
       {
+        id: 3,
         name_surname: "Mike Wilson",
         startdate: new Date("2024-02-01").getTime(),
         enddate: new Date("2024-04-30").getTime(),
@@ -75,6 +83,7 @@ export class DataService {
         secondarySkill: "MongoDB",
       },
       {
+        id: 4,
         name_surname: "Sarah Davis",
         startdate: new Date("2024-02-15").getTime(),
         enddate: new Date("2024-05-25").getTime(),
@@ -82,6 +91,7 @@ export class DataService {
         secondarySkill: "Docker",
       },
       {
+        id: 5,
         name_surname: "David Brown",
         startdate: new Date("2024-03-01").getTime(),
         enddate: new Date("2024-03-30").getTime(),

@@ -12,10 +12,14 @@
 
   <svg class="timeline-svg" #timelineSvg></svg>
   
-  <div class="tasks-list">
-    <div *ngFor="let task of tasks" class="task-label">
+  <div class="task-info" *ngIf="task">
+    <div class="task-label">
       Задача: {{ task?.name }} ({{ task?.startdate | date:'dd.MM.yyyy' }} -
       {{ task?.enddate | date:'dd.MM.yyyy' }})
     </div>
+  </div>
+  
+  <div *ngIf="!task" class="no-task">
+    Задача не выбрана
   </div>
 </div>

@@ -1,4 +1,5 @@
 export interface Worker {
+  id: number;
   name_surname: string;
   startdate: number;
   enddate: number;

@@ -14,14 +14,15 @@ import { FormsModule } from "@angular/forms";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  tasks;
+  tasks: Task[];
   selectedTask: Task | null = null;
 
   constructor(public dataService: DataService) {
     this.tasks = this.dataService.getTasks();
   }
 
-  onSelectTask(task: Task): void {
-    this.selectedTask = task;
+  onSelectTask(event: Event): void {
+    const taskId = Number((event.target as HTMLSelectElement).value);
+    this.selectedTask = this.dataService.getTasks().find(task => task.id === taskId) || null;
   }
 }

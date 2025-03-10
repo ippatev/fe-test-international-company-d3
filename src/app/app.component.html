@@ -2,9 +2,9 @@
   <h1>Распределение работников</h1>
   <select
     [(ngModel)]="selectedTask"
-    (change)="onSelectTask($event.target.value)"
+    (change)="onSelectTask($event)"
   >
-    <option *ngFor="let task of dataService.getTasks()" [value]="task">
+    <option *ngFor="let task of dataService.getTasks()" [value]="task.id">
       {{ task.name }} ({{ task.startdate | date }} - {{ task.enddate | date }})
     </option>
   </select>
