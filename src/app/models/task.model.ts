@@ -1,7 +1,7 @@
 export interface Task {
   name: string;
-  startdate: Date;
-  enddate: Date;
+  startdate: number;
+  enddate: number;
   primarySkill: string;
   secondarySkill?: string;
 }
