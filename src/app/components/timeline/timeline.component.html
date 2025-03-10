@@ -1,0 +1,21 @@
+<div class="timeline-container">
+  <div class="legend">
+    <div class="legend-item">
+      <span class="legend-color" style="background-color: lightblue"></span>
+      <span class="legend-text">Задача</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-color" style="background-color: #e0e0e0"></span>
+      <span class="legend-text">Работник</span>
+    </div>
+  </div>
+
+  <svg class="timeline-svg" #timelineSvg></svg>
+  
+  <div class="tasks-list">
+    <div *ngFor="let task of tasks" class="task-label">
+      Задача: {{ task?.name }} ({{ task?.startdate | date:'dd.MM.yyyy' }} -
+      {{ task?.enddate | date:'dd.MM.yyyy' }})
+    </div>
+  </div>
+</div>
